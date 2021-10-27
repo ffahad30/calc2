@@ -17,11 +17,18 @@ class Calculator:
         """ adds number to result"""
         self.result = self.result + value_a
         return self.result
+
     def subtract_number(self, value_a):
         """ subtract number from result"""
         self.result = self.result - value_a
         return self.result
-    def multiply_number(self, value_a):
-        """ multiplies number and result"""
-        self.result = self.result * value_a
+
+    def multiply_number(self, value_a, value_b):
+        """ multiplies two numbers"""
+        self.result = value_a * value_b
+        return self.result
+
+    def divide_number(self, value_a, value_b):
+        """ divides two numbers"""
+        self.result = value_a // value_b
         return self.result
