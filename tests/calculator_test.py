@@ -36,5 +36,11 @@ def test_calculator_multiply():
 def test_calculator_divide():
     """Testing the divide function of the calculator"""
     calc = Calculator()
-    calc.divide_number(20, 5)
-    assert calc.result == 4
+    calc.divide_number(20, 4)
+    assert calc.result == 5
+
+def test_calculator_divide_error():
+    """Testing the zero divide exception within the divide function of the calculator"""
+    calc = Calculator()
+    calc.divide_number(1, 0)
+    assert calc.result == "error"

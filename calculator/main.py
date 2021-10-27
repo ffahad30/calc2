@@ -30,5 +30,8 @@ class Calculator:
 
     def divide_number(self, value_a, value_b):
         """ divides two numbers"""
-        self.result = value_a // value_b
+        if value_b != 0:
+            self.result = value_a // value_b
+        else:
+            self.result = "error"
         return self.result
