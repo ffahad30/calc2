@@ -5,10 +5,12 @@ def inc(x_value):
     """ Increment Function adds one to the x_value"""
     return x_value + 1
 
+
 class Calculator:
     """ This is the Calculator class"""
 
     result = 0
+
     def get_result(self):
         """ Get Result of Calculation"""
         return self.result
