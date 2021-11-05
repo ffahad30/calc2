@@ -1,10 +1,9 @@
 """Subtraction Class"""
+from calculation import Calculation
 
 
-class Subtraction:
+class Subtraction(Calculation):
+    """ Subtracting two numbers"""
 
-    @staticmethod
-    def subtract(value_a, value_b):
-        return value_a - value_b
-
-
+    def getResult(self):
+        return self.value_a - self.value_b

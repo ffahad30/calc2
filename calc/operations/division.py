@@ -1,9 +1,9 @@
 """Division Class"""
+from calculation import Calculation
 
 
-class Division:
+class Division(Calculation):
+    """ Dividing two numbers"""
 
-    @staticmethod
-    def divide(value_a, value_b):
-        return value_a//value_b
-
+    def getResult(self):
+        return self.value_a / self.value_b

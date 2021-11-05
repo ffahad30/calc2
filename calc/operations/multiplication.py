@@ -1,9 +1,9 @@
 """Multiplication Class"""
+from calculation import Calculation
 
 
-class Multiplication:
+class Multiplication(Calculation):
+    """ Multiplying two numbers"""
 
-    @staticmethod
-    def multiply(value_a, value_b):
-        return value_a * value_b
-
+    def getResult(self):
+        return self.value_a * self.value_b
