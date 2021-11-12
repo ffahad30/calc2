@@ -1,53 +1,90 @@
 """Testing the Calculator"""
-from calculator.main import Calculator
+
+from pprint import pprint
 
 
-def test_calculator_result():
-    """testing calculator result is 0"""
-    calc = Calculator()
-    assert calc.result == 0
+from calc.calculator import Calculator
 
 
-def test_calculator_get_result():
-    """Testing the Get result method of the calculator"""
-    calc = Calculator()
-    calc.add_number(2)
-    assert calc.get_result() == 2
+def test_calculator_add_static():
+    """testing that the calculator has a static method for addition"""
+    Calculator.history.clear()
+    assert Calculator.add_numbers(1, 2) == 3
+    assert Calculator.add_numbers(2, 5) == 7
+    assert Calculator.history_calculations_count() == 2
+    assert Calculator.first_calculation_result_in_history() == 3
+    assert Calculator.last_calculation_result_in_history() == 7
+    pprint(Calculator.history)
 
 
-def test_calculator_add():
-    """Testing the Add function of the calculator"""
-    # Arrange by instantiating the calculator class
-    calc = Calculator()
-    # Act by calling the method to be tested
-    calc.add_number(1)
-    # Assert that the results are correct
-    assert calc.result == 1
+def test_calculator_subtract_static():
+    """testing that the calculator has a static method for subtraction"""
+    Calculator.history.clear()
+    assert Calculator.subtract_numbers(2, 1) == 1
+    assert Calculator.subtract_numbers(7, 2) == 5
+    assert Calculator.subtract_numbers(5, 2) == 3
+    assert Calculator.history_calculations_count() == 3
+    assert Calculator.first_calculation_result_in_history() == 1
+    assert Calculator.last_calculation_result_in_history() == 3
+    pprint(Calculator.history)
 
 
-def test_calculator_subtract():
-    """Testing the subtract method of the calculator"""
-    calc = Calculator()
-    calc.subtract_number(1)
-    assert calc.get_result() == -1
+def test_calculator_multiply_static():
+    """testing that the calculator has a static method for multiplication"""
+    Calculator.history.clear()
+    assert Calculator.multiply_numbers(1, 2) == 2
+    assert Calculator.multiply_numbers(4, 5) == 20
+    assert Calculator.multiply_numbers(6, 2) == 12
+    assert Calculator.multiply_numbers(3, 6) == 18
+    assert Calculator.history_calculations_count() == 4
+    assert Calculator.first_calculation_result_in_history() == 2
+    assert Calculator.last_calculation_result_in_history() == 18
+    pprint(Calculator.history)
 
 
-def test_calculator_multiply():
-    """Testing the multiply function of the calculator"""
-    calc = Calculator()
-    calc.multiply_number(4, 5)
-    assert calc.result == 20
+def test_calculator_divide_static():
+    """testing that the calculator has a static method for division"""
+    Calculator.history.clear()
+    assert Calculator.divide_numbers(6, 2) == 3
+    assert Calculator.divide_numbers(10, 5) == 2
+    assert Calculator.divide_numbers(30, 6) == 5
+    assert Calculator.divide_numbers(14, 2) == 7
+    assert Calculator.divide_numbers(9, 3) == 3
+    assert Calculator.history_calculations_count() == 5
+    assert Calculator.first_calculation_result_in_history() == 3
+    assert Calculator.last_calculation_result_in_history() == 3
+    pprint(Calculator.history)
 
 
-def test_calculator_divide():
-    """Testing the divide function of the calculator"""
-    calc = Calculator()
-    calc.divide_number(20, 4)
-    assert calc.result == 5
+def test_clear_calculator_history():
+    """ testing the clear history function of the calculator"""
+    Calculator.history.clear()
+    assert Calculator.add_numbers(1, 2) == 3
+    assert Calculator.add_numbers(2, 5) == 7
+    assert Calculator.history_calculations_count() == 2
+    assert Calculator.clear_calculator_history() is True
+    assert Calculator.history_calculations_count() == 0
 
 
-def test_calculator_divide_error():
-    """Testing the zero divide exception within the divide function of the calculator"""
-    calc = Calculator()
-    calc.divide_number(1, 0)
-    assert calc.result == "error"
+def test_history_calculations_count():
+    """ testing that the calculator can count the number of calculation results in history"""
+    Calculator.history.clear()
+    assert Calculator.add_numbers(1, 2) == 3
+    assert Calculator.add_numbers(2, 4) == 6
+    assert Calculator.history_calculations_count() == 2
+
+
+def test_first_calculation_result_in_history():
+    """ testing that the calculator can return the first calculation result in history"""
+    Calculator.history.clear()
+    assert Calculator.add_numbers(1, 2) == 3
+    assert Calculator.add_numbers(2, 4) == 6
+    assert Calculator.first_calculation_result_in_history() == 3
+
+
+def test_last_calculation_result_in_history():
+    """ testing that the calculator can return the last calculation result in history"""
+    Calculator.history.clear()
+    assert Calculator.add_numbers(1, 2) == 3
+    assert Calculator.add_numbers(2, 4) == 6
+    assert Calculator.last_calculation_result_in_history() == 6
