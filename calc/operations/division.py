@@ -1,9 +1,10 @@
 """Division Class"""
-from calculation import Calculation
+from calc.operations.calculation import Calculation
 
 
 class Division(Calculation):
     """ Dividing two numbers"""
 
-    def getResult(self):
+    def get_result(self):
+        """ divide two numbers and get the result"""
         return self.value_a / self.value_b

@@ -13,24 +13,24 @@ class Calculator:
 
     @staticmethod
     def first_calculation_result_in_history():
-        return Calculator.history[0].getResult()
+        """ return the first result in the calculator's history"""
+        return Calculator.history[0].get_result()
 
     @staticmethod
     def last_calculation_result_in_history():
-        return Calculator.history[-1].getResult()
+        """ return the last result in the calculator's history"""
+        return Calculator.history[-1].get_result()
 
     @staticmethod
     def history_calculations_count():
+        """ count the number of calculation results in the history"""
         return len(Calculator.history)
 
     @staticmethod
     def clear_calculator_history():
+        """ clear the calculator's history"""
         Calculator.history.clear()
         return True
-
-    @staticmethod
-    def clear_calculator_history_item():
-        Calculator.history.pop()
 
     @staticmethod
     def add_numbers(value_a, value_b):
