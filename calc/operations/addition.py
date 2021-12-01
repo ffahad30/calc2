@@ -11,4 +11,6 @@ class Addition(Calculation):
     def get_result(self):
         """ add two numbers and get the result"""
         # value_a and value_b are seamlessly inherited from calculation class = LSP
-        return self.value_a + self.value_b
+        # result is in a namespace
+        result = self.value_a + self.value_b
+        return result
