@@ -8,8 +8,6 @@ import pytest
 from calc.calculator import Calculator
 
 
-# Arrange step for each of the unit tests
-# fixture
 @pytest.fixture
 def clear_calculator_history_fixture():
     """clears history each time a test is run"""
@@ -20,8 +18,6 @@ def clear_calculator_history_fixture():
 def test_calculator_add_static(clear_calculator_history_fixture):
     """testing that the calculator has a static method for addition"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.add_numbers(1, 2) == 3
     assert Calculator.add_numbers(2, 5) == 7
     assert Calculator.history_calculations_count() == 2
@@ -33,8 +29,6 @@ def test_calculator_add_static(clear_calculator_history_fixture):
 def test_calculator_subtract_static(clear_calculator_history_fixture):
     """testing that the calculator has a static method for subtraction"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.subtract_numbers(2, 1) == 1
     assert Calculator.subtract_numbers(7, 2) == 5
     assert Calculator.subtract_numbers(5, 2) == 3
@@ -47,8 +41,6 @@ def test_calculator_subtract_static(clear_calculator_history_fixture):
 def test_calculator_multiply_static(clear_calculator_history_fixture):
     """testing that the calculator has a static method for multiplication"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.multiply_numbers(1, 2) == 2
     assert Calculator.multiply_numbers(4, 5) == 20
     assert Calculator.multiply_numbers(6, 2) == 12
@@ -62,8 +54,6 @@ def test_calculator_multiply_static(clear_calculator_history_fixture):
 def test_calculator_divide_static(clear_calculator_history_fixture):
     """testing that the calculator has a static method for division"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.divide_numbers(6, 2) == 3
     assert Calculator.divide_numbers(10, 5) == 2
     assert Calculator.divide_numbers(30, 6) == 5
@@ -78,8 +68,6 @@ def test_calculator_divide_static(clear_calculator_history_fixture):
 def test_clear_calculator_history(clear_calculator_history_fixture):
     """ testing the clear history function of the calculator"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.add_numbers(1, 2) == 3
     assert Calculator.add_numbers(2, 5) == 7
     assert Calculator.history_calculations_count() == 2
@@ -90,8 +78,6 @@ def test_clear_calculator_history(clear_calculator_history_fixture):
 def test_history_calculations_count(clear_calculator_history_fixture):
     """ testing that the calculator can count the number of calculation results in history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.add_numbers(1, 2) == 3
     assert Calculator.add_numbers(2, 4) == 6
     assert Calculator.history_calculations_count() == 2
@@ -100,8 +86,6 @@ def test_history_calculations_count(clear_calculator_history_fixture):
 def test_first_calculation_result_in_history(clear_calculator_history_fixture):
     """ testing that the calculator can return the first calculation result in history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.add_numbers(1, 2) == 3
     assert Calculator.add_numbers(2, 4) == 6
     assert Calculator.first_calculation_result_in_history() == 3
@@ -110,8 +94,6 @@ def test_first_calculation_result_in_history(clear_calculator_history_fixture):
 def test_last_calculation_result_in_history(clear_calculator_history_fixture):
     """ testing that the calculator can return the last calculation result in history"""
     # pylint: disable=unused-argument,redefined-outer-name
-    # Act
-    # Assert
     assert Calculator.add_numbers(1, 2) == 3
     assert Calculator.add_numbers(2, 4) == 6
     assert Calculator.last_calculation_result_in_history() == 6
