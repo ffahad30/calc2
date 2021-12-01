@@ -1,5 +1,4 @@
 """Testing the Calculator"""
-# unit tests
 # pylint: disable=duplicate-code
 from pprint import pprint
 

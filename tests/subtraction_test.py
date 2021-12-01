@@ -1,5 +1,4 @@
 """ Testing the subtraction function"""
-# unit test
 # pylint: disable=duplicate-code
 from pprint import pprint
 

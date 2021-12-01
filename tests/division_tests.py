@@ -1,5 +1,4 @@
 """ Testing the division function"""
-# unit test
 # pylint: disable=duplicate-code
 from pprint import pprint
 
