@@ -21,6 +21,5 @@ def test_calculator_divide_static():
     assert Calculator.history_calculations_count() == 5
     assert Calculator.first_calculation_result_in_history() == 3
     assert Calculator.last_calculation_result_in_history() == 3
-    # "float(float(Calculator.last_calculation_result_in_history())" is a type cast
     assert float(Calculator.last_calculation_result_in_history()) == 3.0
     pprint(Calculator.history)

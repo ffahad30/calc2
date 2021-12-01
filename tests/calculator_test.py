@@ -9,7 +9,6 @@ from calc.calculator import Calculator
 
 
 # Arrange step for each of the unit tests
-# fixture
 @pytest.fixture
 def clear_calculator_history_fixture():
     """clears history each time a test is run"""

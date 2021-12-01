@@ -21,6 +21,5 @@ def test_calculator_subtract_static():
     assert Calculator.history_calculations_count() == 3
     assert Calculator.first_calculation_result_in_history() == 1
     assert Calculator.last_calculation_result_in_history() == 3
-    # "float(float(Calculator.last_calculation_result_in_history())" is a type cast
     assert float(Calculator.last_calculation_result_in_history()) == 3.0
     pprint(Calculator.history)
