@@ -8,12 +8,9 @@ from calc.operations.division import Division
 
 # pylint: disable=line-too-long
 
-# all of the calculator's methods and variables are in class Calculator = encapsulation
+
 # static class
 # main class in facade pattern which inherits Addition, Subtraction, Multiplication, and Subtraction classes
-# calculator class and all of its functions only have the methods and properties needed, nothing extra = ISP
-# all functions are open for extension but closed for modification ; they cannot be changed = OCP
-# separate functions for each of the calculator's math and history operations = SRP
 class Calculator:
     """ This is the Calculator class"""
 
