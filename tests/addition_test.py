@@ -18,6 +18,6 @@ def test_calculator_add_static():
     assert Calculator.history_calculations_count() == 2
     assert Calculator.first_calculation_result_in_history() == 3
     assert Calculator.last_calculation_result_in_history() == 7
-    # "float(float(Calculator.last_calculation_result_in_history())" is a type cast
+    # "float((Calculator.last_calculation_result_in_history())" is a type cast
     assert float(Calculator.last_calculation_result_in_history()) == 7.0
     pprint(Calculator.history)
