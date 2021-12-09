@@ -1,13 +1,12 @@
 """ Testing the division function's ZeroDivisionError exception"""
 # unit test
 # pylint: disable=duplicate-code
-from pprint import pprint
 
 
 from calc.operations.division import Division
 
 from tests import reading_csv
-from results import error_log as log
+from logs import error_log as log
 
 
 # division error test

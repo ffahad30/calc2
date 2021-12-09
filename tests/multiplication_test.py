@@ -5,7 +5,7 @@
 from calc.operations.multiplication import Multiplication
 
 from tests import reading_csv
-from results import results_log as log
+from logs import results_log as log
 
 
 # multiplication test

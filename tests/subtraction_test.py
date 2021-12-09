@@ -6,7 +6,7 @@
 from calc.operations.subtraction import Subtraction
 
 from tests import reading_csv
-from results import results_log as log
+from logs import results_log as log
 
 
 # subtraction test

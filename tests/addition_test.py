@@ -5,7 +5,7 @@
 from calc.operations.addition import Addition
 
 from tests import reading_csv
-from results import results_log as log
+from logs import results_log as log
 
 
 # addition test

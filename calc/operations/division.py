@@ -18,5 +18,3 @@ class Division(Calculation):
         else:
             result = "error"
         return result
-
-

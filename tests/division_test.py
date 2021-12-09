@@ -1,13 +1,12 @@
 """ Testing the division function"""
 # unit test
 # pylint: disable=duplicate-code
-from pprint import pprint
 
 
 from calc.operations.division import Division
 
 from tests import reading_csv
-from results import results_log as log
+from logs import results_log as log
 
 
 # division test

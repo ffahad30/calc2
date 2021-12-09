@@ -38,7 +38,7 @@ class Calculator:
     @staticmethod
     # "-> int" is a type hint
     def history_calculations_count() -> int:
-        """ count the number of calculation results in the history"""
+        """ count the number of calculation logs in the history"""
         # len() is a list method
         return len(Calculator.history)
 

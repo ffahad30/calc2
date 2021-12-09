@@ -28,7 +28,7 @@ def test_clear_calculator_history(clear_calculator_history_fixture):
 
 
 def test_history_calculations_count(clear_calculator_history_fixture):
-    """ testing that the calculator can count the number of calculation results in history"""
+    """ testing that the calculator can count the number of calculation logs in history"""
     # pylint: disable=unused-argument,redefined-outer-name
     # Act
     # Assert
