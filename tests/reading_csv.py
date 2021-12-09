@@ -5,7 +5,7 @@ import pandas as pd
 
 def reading_csv(path):
     """Reading the results of the addition, subtraction, multiplication, and division CSV files"""
-    x = pd.read_csv('addition.csv', index_col=0)
+    x = pd.read_csv(path)
     value_1 = x['VALUE 1']
     value_2 = x['VALUE 2']
     result = x['RESULT']

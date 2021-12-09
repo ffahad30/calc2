@@ -1,8 +1,7 @@
 """ Testing the addition function"""
 # unit test
 # pylint: disable=duplicate-code
-from pprint import pprint
-from calc.calculator import Calculator
+
 from calc.operations.addition import Addition
 
 from tests import reading_csv
